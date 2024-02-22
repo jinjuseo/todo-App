@@ -1,0 +1,112 @@
+:root {
+  --main-bg-color: black;
+  --main-text-color: #fff;
+  --btn-active-color: rgba(255, 255, 255, 0.7);
+}
+
+body {
+  background-color: var(--main-bg-color);
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+.header {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header-logo {
+  color: var(--main-text-color);
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 400;
+}
+#addBtn {
+  border-radius: 100%;
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  border: none;
+  width: 52px;
+  height: 52px;
+  font-size: 32px;
+}
+
+#addBtn:hover {
+  cursor: pointer;
+}
+#addBtn:active {
+  background-color: var(--btn-active-color);
+}
+
+.main-container {
+  padding-top: 40px;
+  width: 100%;
+  height: calc(100vh - 173px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 28px;
+}
+.todo-container {
+  background-color: var(--main-text-color);
+  width: 80%;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 12px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+}
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.todo-content {
+  width: 72%;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  color: var(--main-bg-color);
+  margin-right: 12px;
+}
+.todo-content:focus {
+  color: var(--main-bg-color);
+  outline: none;
+  border-bottom: 1px solid var(--main-bg-color);
+}
+.todo-editBtn {
+  font-size: 32px;
+  color: var(--main-bg-color);
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.todo-removeBtn {
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  border: none;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  border-radius: 50%;
+}
+
+.todo-editBtn:hover,
+.todo-removeBtn:hover {
+  cursor: pointer;
+}
+
+.todo-editBtn:active,
+.todo-removeBtn:active {
+  box-shadow: 5px 5px 8px -5px inset;
+}
